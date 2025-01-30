@@ -1,0 +1,119 @@
+Construct Central {
+    Declare Breakpoints({
+        MobileFirst({
+            SmallScreen: "640px",
+            MediumScreen: "768px",
+            LargeScreen: "1024px",
+            ExtraLargeScreen: "1280px",
+            UltraLargeScreen: "1536px"
+        })
+    }),
+    Declare Variables({
+        backgroundGray: "oklch(0.551 0.027 264.364)",
+        textGray: "oklch(0.21 0.034 264.665)",
+
+        // Colors
+        white: "#FFFFFF",
+        gray50: "#f9fafb",
+        gray100: "#F3F4F6",
+        gray200: "#E5E7EB",
+        gray300: "#D1D5DB",
+        gray500: "#6B7280",
+        gray700: "#374151",
+        gray800: "#1F2937",
+        gray900: "#101828",
+        blue200: "#93C5FD",
+        blue400: "#60A5FA",
+        blue500: "#3B82F6",
+
+        // Extra colors
+        secondaryDark: "#1D1F21",
+        tertiaryDark: "#3B3D40",
+        strokeDark: "#2D3135",
+        primaryBlue: "#0275FF",
+    }),
+    Declare Themes({
+        Light({
+            Variables({
+                whiteBlackColors: "#FFFFFF",
+                blackWhiteColors: "#000000",
+
+                primaryBackground: "#f9fafb",
+                secondaryBackground: "#F3F4F6"
+            })
+        }),
+        Dark({
+            Variables({
+                whiteBlackColors: "#000000",
+                blackWhiteColors: "#FFFFFF",
+
+                primaryBackground: "#101214",
+                secondaryBackground: "#374151"
+            })
+        })
+    }),
+    Declare Aliases({
+        bgd: background,
+        bgdClip: backgroundClip,
+        bgdImage: backgroundImage,
+        bgdColor: backgroundColor,
+        bgdPos: backgroundPosition,
+        bgdRpt: backgroundRepeat,
+        bgdSize: backgroundSize,
+        txtFont: fontFamily,
+        txtSize: fontSize,
+        bold: fontWeight,
+        box: boxSizing,
+        txtShadow: textShadow,
+        pos: position,
+        hr: height,
+        minHr: minHeight,
+        wd: width,
+        p: padding,
+        pl: paddingLeft,
+        pr: paddingRight,
+        pt: paddingTop,
+        pb: paddingBottom,
+        br: borderRadius,
+        b: border,
+        flexDir: flexDirection,
+        items: alignItems,
+        justify: justifyContent,
+        shadow: boxShadow,
+        m: margin,
+        mr: marginRight,
+        ml: marginLeft,
+        mt: marginTop,
+        mb: marginBottom,
+        z: zIndex,
+    }),
+    Declare Class("unstyledLink") {
+        Stylesheet({
+            textDecoration: "none",
+            color: "inherit",
+            background: "none",
+            border: "none",
+            outline: "none",
+        }),
+        Hover({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Active({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Visited({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        }),
+        Focus({
+            textDecoration: "none",
+            color: "inherit",
+            outline: "none",
+        })
+    },
+}

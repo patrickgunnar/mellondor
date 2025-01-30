@@ -1,0 +1,25 @@
+Construct Module("dashWrap") {
+    Declare Class("wrapper") {
+        Stylesheet({
+            color: "${gray900}",
+            display: "flex",
+            minHr: "100vh",
+            wd: "100%"
+        })
+    },
+    Declare Class("main") {
+        Stylesheet({
+            bgdColor: "${primaryBackground}",
+            display: "flex",
+            flexDir: "column",
+            wd: "100%"
+        }),
+        PanoramicViewer({
+            MediumScreen({
+                Stylesheet({
+                    pl: "16rem"
+                })
+            })
+        })
+    }
+}

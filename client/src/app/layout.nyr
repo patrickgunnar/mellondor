@@ -1,0 +1,12 @@
+Construct Layout("app") {
+    Declare Class("body") {
+        Stylesheet({
+            bgdColor: "${backgroundGray}",
+            color: "${textGray}",
+            txtSize: "0.875rem",
+            hr: "100vh",
+            wd: "100vw",
+            overflowX: "hidden"
+        })
+    }
+}

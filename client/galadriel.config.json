@@ -1,0 +1,6 @@
+{
+    "exclude": ["logs/**", "node_modules/**", ".next/**", ".git/**"],
+    "minifiedStyles": false,
+    "resetStyles": true,
+    "autoNaming": false
+}
