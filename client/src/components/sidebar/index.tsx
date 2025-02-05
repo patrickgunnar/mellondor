@@ -1,7 +1,7 @@
 "use client";
 
 import { useSidebar } from "@/store/useSidebar";
-import { X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Sidebar() {
@@ -38,7 +38,7 @@ export default function Sidebar() {
                     type="button"
                     onClick={handleCollapse}
                 >
-                    <X />
+                    {!collapsed ? <X /> : <Menu />}
                 </button>
             </div>
             {!collapsed && <div>Profile</div>}
