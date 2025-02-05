@@ -8,44 +8,6 @@ Construct Module("navbar") {
             p: "0.75rem 1rem",
         })
     },
-    Declare Class("searcher") {
-        Stylesheet({
-            bgdColor: "${secondaryBackground}",
-            b: "none",
-            br: "10px",
-            display: "flex",
-            items: "center",
-            justify: "center",
-            p: "0.5rem",
-            hr: "min-content",
-            wd: "calc(1.25rem + 0.5rem + 200px)"
-        })
-    },
-    Declare Class("searcherIcn") {
-        Stylesheet({
-            color: "${blackWhiteColors}",
-            cursor: "pointer",
-            mr: "0.5rem",
-            hr: "1.25rem",
-            wd: "1.25rem",
-        })
-    },
-    Declare Class("searcherInput") {
-        Stylesheet({
-            bgdColor: "transparent",
-            color: "${blackWhiteColors}",
-            b: "none",
-            hr: "100%",
-            wd: "200px",
-        }),
-        Focus({
-            b: "none",
-            outline: "none"
-        }),
-        PlaceholderShown({
-            color: "${gray500}",
-        })
-    },
     Declare Class("navigator") {
         Stylesheet({
             display: "flex",

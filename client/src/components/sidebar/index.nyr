@@ -45,30 +45,4 @@ Construct Module("sidebar") {
             justify: "center",
         })
     },
-    Declare Class("logo") {
-        Stylesheet({
-            bold: "700",
-            txtSize: "1.25rem",
-            textTransform: "uppercase",
-            color: "${blackWhiteColors}",
-        })
-    },
-    Declare Class("toggle") {
-        Stylesheet({
-            display: "flex",
-            justify: "center",
-            items: "center",
-            bgdColor: "transparent",
-            b: "none",
-            outline: "none",
-            br: "10px",
-            color: "${blackWhiteColors}",
-            cursor: "pointer",
-            hr: "40px",
-            wd: "40px"
-        }),
-        Hover({
-            bgdColor: "${secondaryBackground}"
-        })
-    }
 }

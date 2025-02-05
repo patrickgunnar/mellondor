@@ -1,14 +1,17 @@
 "use client";
 
+import { useDisplayPriority } from "@/store/useDisplayPriority";
+import { useDisplayProjects } from "@/store/useDisplayProjects";
 import { useSidebar } from "@/store/useSidebar";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
 
 export default function Sidebar() {
     const { collapsed, onCollapsed, onExpand } = useSidebar((state) => state);
+    const { displayedProjects, collapseProjects, expandProjects } =
+        useDisplayProjects((state) => state);
 
-    const [isDisplayProjects, setIsDisplayProjects] = useState<boolean>(false);
-    const [isDisplayPriority, setIsDisplayPriority] = useState<boolean>(false);
+    const { displayedPriority, collapsedPriority, expandPriority } =
+        useDisplayPriority((state) => state);
 
     const handleCollapse = () => {
         if (collapsed) onExpand();
@@ -30,11 +33,9 @@ export default function Sidebar() {
                         : "@module:sidebar::justifyBetween"
                 }`}
             >
-                {!collapsed && (
-                    <h1 className="@module:sidebar::logo">Mellondor</h1>
-                )}
+                {!collapsed && <h1 className="@class:logo">Mellondor</h1>}
                 <button
-                    className="@module:sidebar::toggle"
+                    className="@class:toggle"
                     type="button"
                     onClick={handleCollapse}
                 >

@@ -1,31 +1,45 @@
 "use client";
 
-import React, { PropsWithChildren, useEffect } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 import Navbar from "../navbar";
 import Sidebar from "../sidebar";
 import { useSidebar } from "@/store/useSidebar";
 import { useMediaQuery } from "usehooks-ts";
+import MobileNavbar from "../mobile-navbar";
+import Loading from "@/app/loading";
 
 const DashboardWrapper = ({ children }: PropsWithChildren) => {
     const { collapsed, onCollapsed, onExpand } = useSidebar((state) => state);
-    const matches = useMediaQuery("(max-width: 1024px)");
+
+    const mdMatches = useMediaQuery("(max-width: 1024px)");
+    const smMatches = useMediaQuery("(max-width: 768px)");
+
+    const [isClient, setIsClient] = useState<boolean>(false);
 
     useEffect(() => {
-        if (matches) onCollapsed();
+        if (mdMatches) onCollapsed();
         else onExpand();
-    }, [matches, onCollapsed, onExpand]);
+    }, [mdMatches, onCollapsed, onExpand]);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") setIsClient(true);
+    }, []);
+
+    if (!isClient) return <Loading />;
 
     return (
         <div className="@module:dashWrap::wrapper">
-            <Sidebar />
+            {!smMatches && <Sidebar />}
             <main
                 className={`@module:dashWrap::main ${
-                    !collapsed
-                        ? "@module:dashWrap::wd100less16rem"
-                        : "@module:dashWrap::wd100less5rem"
+                    !smMatches
+                        ? !collapsed
+                            ? "@module:dashWrap::wd100less16rem"
+                            : "@module:dashWrap::wd100less5rem"
+                        : "@module:dashWrap::wd100"
                 }`}
             >
-                <Navbar />
+                {!smMatches ? <Navbar /> : <MobileNavbar />}
                 {children}
             </main>
         </div>

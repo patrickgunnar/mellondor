@@ -1,0 +1,15 @@
+Construct Module("mobileNav") {
+    Declare Class("nav") {
+        Stylesheet({
+            box: "border-box",
+            bgdColor: "${whiteBlackColors}",
+            display: "flex",
+            flexDir: "row",
+            items: "center",
+            justify: "space-between",
+            p: "0.75rem 1rem",
+            hr: "70px",
+            z: "40"
+        })
+    },
+}

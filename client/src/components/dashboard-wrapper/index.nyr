@@ -27,5 +27,10 @@ Construct Module("dashWrap") {
             ml: "5rem",
             wd: "calc(100% - 5rem)"
         })
+    },
+    Declare Class("wd100") {
+        Stylesheet({
+            wd: "100%"
+        })
     }
 }

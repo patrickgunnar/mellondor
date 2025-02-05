@@ -1,0 +1,24 @@
+Construct Module("mobileMenu") {
+    Declare Class("container") {
+        Stylesheet({
+            box: "border-box",
+            bgdColor: "${whiteBlackColors}",
+            shadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+            display: "flex",
+            flexDir: "column",
+            justify: "space-between",
+            items: "center",
+            p: "1rem",
+            top: "70px",
+            left: "0",
+            pos: "fixed",
+            hr: "calc(100vh - 70px)",
+            wd: "20rem",
+            z: "40",
+            transitionProperty: "all",
+            transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+            transitionDuration: "300ms",
+            overflowY: "auto",
+        })
+    }
+}
