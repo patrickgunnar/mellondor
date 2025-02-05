@@ -6,3 +6,4 @@ client/dist/
 client/.env
 client/.next/
 client/logs/
+/logs

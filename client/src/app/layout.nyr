@@ -2,7 +2,7 @@ Construct Layout("app") {
     Declare Class("body") {
         Stylesheet({
             bgdColor: "${backgroundGray}",
-            color: "${textGray}",
+            color: "${blackWhiteColors}",
             txtSize: "0.875rem",
             hr: "100vh",
             wd: "100vw",

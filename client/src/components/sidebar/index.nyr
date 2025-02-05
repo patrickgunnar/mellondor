@@ -1,0 +1,74 @@
+Construct Module("sidebar") {
+    Declare Class("aside") {
+        Stylesheet({
+            box: "border-box",
+            bgdColor: "${whiteBlackColors}",
+            shadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+            display: "flex",
+            flexDir: "column",
+            justify: "space-between",
+            p: "1rem",
+            pos: "fixed",
+            hr: "100%",
+            z: "40",
+            transitionProperty: "all",
+            transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+            transitionDuration: "300ms",
+            overflowY: "auto",
+        })
+    },
+    Declare Class("wd16rem") {
+        Stylesheet({
+            wd: "16rem",
+        })
+    },
+    Declare Class("wd5rem") {
+        Stylesheet({
+            wd: "5rem"
+        })
+    },
+    Declare Class("lgContainer") {
+        Stylesheet({
+            display: "flex",
+            flexDir: "row",
+            items: "center",
+            wd: "100%"
+        })
+    },
+    Declare Class("justifyBetween") {
+        Stylesheet({
+            justify: "space-between",
+        })
+    },
+    Declare Class("justifyCenter") {
+        Stylesheet({
+            justify: "center",
+        })
+    },
+    Declare Class("logo") {
+        Stylesheet({
+            bold: "700",
+            txtSize: "1.25rem",
+            textTransform: "uppercase",
+            color: "${blackWhiteColors}",
+        })
+    },
+    Declare Class("toggle") {
+        Stylesheet({
+            display: "flex",
+            justify: "center",
+            items: "center",
+            bgdColor: "transparent",
+            b: "none",
+            outline: "none",
+            br: "10px",
+            color: "${blackWhiteColors}",
+            cursor: "pointer",
+            hr: "40px",
+            wd: "40px"
+        }),
+        Hover({
+            bgdColor: "${secondaryBackground}"
+        })
+    }
+}

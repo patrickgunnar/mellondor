@@ -1,8 +1,10 @@
 Construct Module("dashWrap") {
     Declare Class("wrapper") {
         Stylesheet({
-            color: "${gray900}",
+            color: "inherit",
             display: "flex",
+            flexDir: "row",
+            justify: "space-between",
             minHr: "100vh",
             wd: "100%"
         })
@@ -12,14 +14,18 @@ Construct Module("dashWrap") {
             bgdColor: "${primaryBackground}",
             display: "flex",
             flexDir: "column",
-            wd: "100%"
         }),
-        PanoramicViewer({
-            MediumScreen({
-                Stylesheet({
-                    pl: "16rem"
-                })
-            })
+    },
+    Declare Class("wd100less16rem") {
+        Stylesheet({
+            ml: "16rem",
+            wd: "calc(100% - 16rem)"
+        })
+    },
+    Declare Class("wd100less5rem") {
+        Stylesheet({
+            ml: "5rem",
+            wd: "calc(100% - 5rem)"
         })
     }
 }
