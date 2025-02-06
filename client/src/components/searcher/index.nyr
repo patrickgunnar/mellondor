@@ -3,7 +3,7 @@ Construct Module("searcher") {
         Stylesheet({
             bgdColor: "${secondaryBackground}",
             b: "none",
-            br: "10px",
+            radius: "10px",
             display: "flex",
             items: "center",
             justify: "center",

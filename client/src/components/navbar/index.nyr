@@ -21,7 +21,7 @@ Construct Module("navbar") {
             items: "center",
             justify: "center",
             b: "none",
-            br: "10px",
+            radius: "10px",
             p: "0.5rem",
             hr: "1.6rem",
             wd: "1.6rem"

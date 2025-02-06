@@ -1,0 +1,62 @@
+Construct Module("pBadge") {
+    Declare Class("box") {
+        Stylesheet({
+            display: "flex",
+            gap: "1rem",
+            items: "center",
+            justify: "center",
+            wd: "100%"
+        })
+    },
+    Declare Class("expanded") Deriving("box") {
+        Stylesheet({
+            box: "border-box",
+            b: "none",
+            bt: "1px solid ${secondaryBackground}",
+            bb: "1px solid ${secondaryBackground}",
+            pt: "1rem",
+            pb: "1rem",
+        })
+    },
+    Declare Class("logo") {
+        Stylesheet({
+            txtSize: "40px",
+            hr: "40px",
+            wd: "40px"
+        })
+    },
+    Declare Class("heading") {
+        Stylesheet({
+            display: "flex",
+            gap: "0.5rem",
+            flexDir: "column",
+            items: "center",
+            justify: "center"
+        })
+    },
+    Declare Class("name") {
+        Stylesheet({
+            bold: "700",
+            color: "${blackWhiteColors}",
+            txtSize: "1rem",
+            letterSpacing: "0.05rem",
+            textWrap: "wrap"
+        })
+    },
+    Declare Class("subheading") {
+        Stylesheet({
+            txtSize: "13px",
+            opacity: "0.75",
+            bold: "600",
+            ml: "0px",
+            mr: "auto"
+        })
+    },
+    Declare Class("subheadingIcn") {
+        Stylesheet({
+            hr: "13px",
+            wd: "13px",
+            mr: "6px"
+        })
+    }
+}

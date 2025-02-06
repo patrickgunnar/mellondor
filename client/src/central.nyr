@@ -39,7 +39,7 @@ Construct Central {
                 blackWhiteColors: "#000000",
 
                 primaryBackground: "#f9fafb",
-                secondaryBackground: "#F3F4F6"
+                secondaryBackground: "#D1D5DB"
             })
         }),
         Dark({
@@ -74,8 +74,12 @@ Construct Central {
         pr: paddingRight,
         pt: paddingTop,
         pb: paddingBottom,
-        br: borderRadius,
+        radius: borderRadius,
         b: border,
+        br: borderRight,
+        bl: borderLeft,
+        bt: borderTop,
+        bb: borderBottom,
         flexDir: flexDirection,
         items: alignItems,
         justify: justifyContent,
@@ -124,7 +128,7 @@ Construct Central {
             bgdColor: "transparent",
             b: "none",
             outline: "none",
-            br: "10px",
+            radius: "10px",
             color: "${blackWhiteColors}",
             cursor: "pointer",
             hr: "40px",

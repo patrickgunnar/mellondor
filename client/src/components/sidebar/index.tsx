@@ -3,7 +3,8 @@
 import { useDisplayPriority } from "@/store/useDisplayPriority";
 import { useDisplayProjects } from "@/store/useDisplayProjects";
 import { useSidebar } from "@/store/useSidebar";
-import { Menu, X } from "lucide-react";
+import { Menu, Snail, User, X } from "lucide-react";
+import ProfileBadge from "../profile-badge";
 
 export default function Sidebar() {
     const { collapsed, onCollapsed, onExpand } = useSidebar((state) => state);
@@ -42,6 +43,7 @@ export default function Sidebar() {
                     {!collapsed ? <X /> : <Menu />}
                 </button>
             </div>
+            <ProfileBadge collapsed={collapsed} />
             {!collapsed && <div>Profile</div>}
         </aside>
     );
